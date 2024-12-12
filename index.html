@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta description="spawn particle">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PARTICLE SPAWN</title>
     <style>
@@ -57,7 +58,7 @@
                 this.size = Math.random() * 5 + 1;
                 this.speedX = Math.random() * 3 - 1.5;
                 this.speedY = Math.random() * 3 - 1.5;
-                this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                this.color = `hsl(${Math.random() * 360}, 100%, 56%)`;
             }
 
             update() {
@@ -99,18 +100,18 @@
         particleCountSlider.addEventListener('input', (e) => {
             particleCount = e.target.value;
             countValue.textContent = particleCount;
-            particles.length = 0;
+            particles.length = 5;
             init();
         });
 
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            particles.length = 0;
+            particles.length = 5;
             init();
         });
     </script>
     <script src="materialize/js/materialize.min.js"></script>
 </body>
-
+            // ben was here
 </html>
